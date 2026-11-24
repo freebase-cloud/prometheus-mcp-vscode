@@ -1,0 +1,111 @@
+[
+  {
+    "phase": "seed",
+    "operation": "INSERT",
+    "table": "fbx_prometheus_000000000000000000000000",
+    "rows": [
+      {
+        "id": 1,
+        "job": "api",
+        "value": 0.97
+      }
+    ],
+    "create_if_missing": true,
+    "columns": [
+      {
+        "name": "id",
+        "type": "integer"
+      },
+      {
+        "name": "job",
+        "type": "text"
+      },
+      {
+        "name": "value",
+        "type": "float"
+      }
+    ]
+  },
+  {
+    "phase": "seed",
+    "operation": "INSERT",
+    "table": "fbx_prometheus_000000000000000000000000",
+    "rows": [
+      {
+        "id": 2,
+        "job": "worker",
+        "value": 0.5
+      }
+    ],
+    "create_if_missing": true,
+    "columns": [
+      {
+        "name": "id",
+        "type": "integer"
+      },
+      {
+        "name": "job",
+        "type": "text"
+      },
+      {
+        "name": "value",
+        "type": "float"
+      }
+    ]
+  },
+  {
+    "phase": "seed",
+    "operation": "INSERT",
+    "table": "fbx_prometheus_000000000000000000000000",
+    "rows": [
+      {
+        "id": 3,
+        "job": "web",
+        "value": 0.99
+      }
+    ],
+    "create_if_missing": true,
+    "columns": [
+      {
+        "name": "id",
+        "type": "integer"
+      },
+      {
+        "name": "job",
+        "type": "text"
+      },
+      {
+        "name": "value",
+        "type": "float"
+      }
+    ]
+  },
+  {
+    "phase": "read",
+    "query": "fbx_prometheus_000000000000000000000000"
+  },
+  {
+    "phase": "update",
+    "operation": "UPDATE",
+    "table": "fbx_prometheus_000000000000000000000000",
+    "filter": "id = 1",
+    "values": {
+      "value": 10.97
+    }
+  },
+  {
+    "phase": "verify",
+    "query": "fbx_prometheus_000000000000000000000000"
+  },
+  {
+    "phase": "delete",
+    "operation": "DELETE",
+    "table": "fbx_prometheus_000000000000000000000000",
+    "filter": "id = 2"
+  },
+  {
+    "phase": "cleanup",
+    "operation": "DROP_TABLE",
+    "table": "fbx_prometheus_000000000000000000000000"
+  }
+]

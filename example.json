@@ -1,0 +1,6 @@
+{
+  "name": "prometheus-mcp-vscode",
+  "engine": "prometheus",
+  "slug": "prometheus",
+  "kind": "mcp"
+}

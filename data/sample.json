@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "job": "api",
+    "value": 0.97
+  },
+  {
+    "id": 2,
+    "job": "worker",
+    "value": 0.5
+  },
+  {
+    "id": 3,
+    "job": "web",
+    "value": 0.99
+  }
+]
